@@ -37,6 +37,19 @@ python jbc_eval.py \
     --api-key $OPENROUTER_API_KEY
 ```
 
+### 複数モデルの一括評価
+
+複数のモデルをまとめて評価するための補助スクリプトを用意しています。OpenRouterを使用して、主要なモデル（GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Llama 3など）を一括で評価できます。
+
+1. `run_multiple_evals.sh`内の`OPENROUTER_API_KEY`を設定するか、環境変数としてエクスポートします。
+2. 必要に応じて、スクリプト内の`MODELS`配列を編集して評価対象モデルを変更します。
+3. スクリプトを実行します：
+
+```bash
+chmod +x run_multiple_evals.sh
+./run_multiple_evals.sh
+```
+
 ### CLIオプション
 
 | オプション | 説明 | デフォルト |
@@ -80,11 +93,11 @@ python jbc_eval.py \
 ```
 results/
 ├── gpt-4o/
-│   ├── jbc_results_gpt-4o_20251223_142254.json
-│   └── jbc_report_gpt-4o_20251223_142254.html
+│   ├── jbc_results_gpt-4o_20260102_220233.json
+│   └── jbc_report_gpt-4o_20260102_220233.html
 └── claude-3.5-sonnet/
-    ├── jbc_results_claude-3.5-sonnet_20251223_142616.json
-    └── jbc_report_claude-3.5-sonnet_20251223_142616.html
+    ├── jbc_results_claude-3.5-sonnet_20260102_220233.json
+    └── jbc_report_claude-3.5-sonnet_20260102_220233.html
 ```
 
 ## ライセンス
