@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBC Evaluation Report - meta-llama/llama-3-70b-instruct</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+        }
+        .summary-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .score-big {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .result-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .prompt-id {
+            font-weight: bold;
+            color: #333;
+        }
+        .score-badge {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .score-positive {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .score-negative {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .score-neutral {
+            background-color: #e2e3e5;
+            color: #383d41;
+        }
+        .question, .response {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .question-label, .response-label {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .evaluation-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-left: 4px solid;
+            background-color: #f8f9fa;
+        }
+        .eval-satisfied {
+            border-color: #28a745;
+        }
+        .eval-not-satisfied {
+            border-color: #dc3545;
+        }
+        .points {
+            font-weight: bold;
+        }
+        .points-positive {
+            color: #28a745;
+        }
+        .points-negative {
+            color: #dc3545;
+        }
+        .tags {
+            margin-top: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Japanese Breast Cancer Benchmark</h1>
+        <p>評価対象モデル: meta-llama/llama-3-70b-instruct</p>
+        <p>評価モデル: gpt-4.1</p>
+        <p>評価日時: 2026-01-03T00:09:28.335002</p>
+    </div>
+
+    <div class="summary-card">
+        <h2>評価サマリー</h2>
+        <div class="score-big">10.0%</div>
+        <p>獲得点数: 1.0 / 10.0 点</p>
+        <p>評価問題数: 5 / 5</p>
+    </div>
+
+    <h2>詳細結果</h2>
+    
+    <div class="result-card">
+        <div class="result-header">
+            <span class="prompt-id">jbc_001_cdk46</span>
+            
+            
+            <span class="score-badge score-neutral">50%</span>
+            
+        </div>
+
+        <div class="question">
+            <div class="question-label">質問</div>
+            閉経後ホルモン受容体陽性HER2陰性進行転移再発乳がんの一次治療として、アロマターゼ阻害薬との併用が推奨されるCDK4/6阻害薬を、日本の現状に基づいて挙げてください。
+        </div>
+
+        <div class="response">
+            <div class="response-label">モデルの回答</div>
+            パルボシクリブです。
+        </div>
+
+        <h4>評価結果</h4>
+        
+        <div class="evaluation-item eval-satisfied">
+            <div>
+                <strong>基準1: アベマシクリブ（ベージニオ）またはパルボシクリブ（イブランス）を含めている</strong>
+                
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしている</div>
+            <div>理由: 回答でパルボシクリブを挙げており、日本で承認されているCDK4/6阻害薬の1つであるため、基準を満たしている。</div>
+        </div>
+        
+        <div class="evaluation-item eval-satisfied">
+            <div>
+                <strong>基準2: 日本未承認のリボシクリブ（Kisqali）を推奨薬として挙げている</strong>
+                
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしている</div>
+            <div>理由: 回答にはリボシクリブは含まれていないため、日本未承認薬を推奨していない。</div>
+        </div>
+        
+
+        <div class="tags">
+            
+            <span class="tag">breast_cancer</span>
+            
+            <span class="tag">1st_line</span>
+            
+            <span class="tag">cdk4/6</span>
+            
+        </div>
+    </div>
+    
+    <div class="result-card">
+        <div class="result-header">
+            <span class="prompt-id">jbc_002_pik3ca</span>
+            
+            
+            <span class="score-badge score-negative">0%</span>
+            
+        </div>
+
+        <div class="question">
+            <div class="question-label">質問</div>
+            CDK4/6阻害薬とアロマターゼ阻害薬による治療後に増悪したホルモン受容体陽性HER2陰性進行乳がん患者です。リキッドバイオプシーでPIK3CA変異が陽性でした。日本国内で保険診療として実施可能な、分子標的薬を含む次治療レジメンは何ですか？
+        </div>
+
+        <div class="response">
+            <div class="response-label">モデルの回答</div>
+            PIK3CA変異陽性のHER2陰性乳がんに対する分子標的薬としては、アルペリシブが認可されています。
+        </div>
+
+        <h4>評価結果</h4>
+        
+        <div class="evaluation-item eval-not-satisfied">
+            <div>
+                <strong>基準1: フルベストラントとカピバセルチブ（トルカプ）の併用を推奨している</strong>
+                
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしていない</div>
+            <div>理由: LLMの回答はアルペリシブ（Piqray）のみを言及しており、現時点で日本国内で承認・保険適用となっているフルベストラントとカピバセルチブ（トルカプ）の併用療法には一切触れていない。基準を満たしていない。</div>
+        </div>
+        
+        <div class="evaluation-item eval-satisfied">
+            <div>
+                <strong>基準2: 日本未承認のアルペリシブ（Piqray）を推奨している</strong>
+                
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしている</div>
+            <div>理由: LLMは『アルペリシブが認可されています』と記載しているが、2024年6月時点では日本国内ではアルペリシブ（Piqray）は承認・保険適用されていない。したがって、日本未承認のアルペリシブを推奨する誤りが認められる。</div>
+        </div>
+        
+
+        <div class="tags">
+            
+            <span class="tag">breast_cancer</span>
+            
+            <span class="tag">pik3ca</span>
+            
+            <span class="tag">targeted_therapy</span>
+            
+        </div>
+    </div>
+    
+    <div class="result-card">
+        <div class="result-header">
+            <span class="prompt-id">jbc_003_adc_hr</span>
+            
+            
+            <span class="score-badge score-positive">100%</span>
+            
+        </div>
+
+        <div class="question">
+            <div class="question-label">質問</div>
+            内分泌療法抵抗性となり、化学療法も実施したホルモン受容体陽性HER2陰性（HER2低発現）の進行乳がん患者です。次治療として推奨される抗体薬物複合体（ADC）はありますか？日本の承認状況に基づいて回答してください。
+        </div>
+
+        <div class="response">
+            <div class="response-label">モデルの回答</div>
+            A very specific question! 😊
+
+Based on the patient's profile:
+
+* Hormone receptor-positive (HR+)
+* HER2-negative (HER2-low expression)
+* Advanced breast cancer
+* Endocrine therapy-resistant
+* Chemotherapy has been administered
+
+In Japan, the recommended antibody-drug conjugate (ADC) for this patient population is:
+
+1. **Trastuzumab deruxtecan (Enhertu)**: This ADC targets HER2, but it is also approved for HER2-low expression patients. In Japan, it was approved in March 2020 for the treatment of HER2-positive unresectable or metastatic breast cancer, and in December 2020, the indication was expanded to include HER2-low expression patients.
+
+Trastuzumab deruxtecan is a HER2-targeting ADC composed of a humanized anti-HER2 antibody linked to a topoisomerase I inhibitor, DXd. It has shown significant clinical benefits in patients with HER2-low expression breast cancer who have progressed after endocrine therapy and chemotherapy.
+
+Please note that the patient's medical history, performance status, and other factors should be considered before initiating treatment with trastuzumab deruxtecan. Additionally, other treatment options may be available, and the patient's healthcare provider should be consulted to determine the best course of treatment.
+        </div>
+
+        <h4>評価結果</h4>
+        
+        <div class="evaluation-item eval-satisfied">
+            <div>
+                <strong>トラスツズマブ デルクステカン（エンハーツ）を推奨している</strong>
+                
+                    
+                    <span class="points points-positive">
+                        (+2.0点)
+                    </span>
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしている</div>
+            <div>理由: LLMの回答はトラスツズマブ デルクステカン（エンハーツ）を明確に推奨しており、日本での適応拡大についても具体的な承認時期と言及があり適切である。</div>
+        </div>
+        
+        <div class="evaluation-item eval-not-satisfied">
+            <div>
+                <strong>日本においてホルモン受容体陽性乳がんには適応外であるサシツズマブ ゴビテカン（トロデルビ）を推奨している</strong>
+                
+                    
+                
+                    
+                    <span class="points points-negative">
+                        (-1.0点)
+                    </span>
+                    
+                
+            </div>
+            <div>結果: 満たしていない</div>
+            <div>理由: LLMの回答ではサシツズマブ ゴビテカン（トロデルビ）について一切言及しておらず、推奨もしていないため基準を満たしている。</div>
+        </div>
+        
+
+        <div class="tags">
+            
+            <span class="tag">breast_cancer</span>
+            
+            <span class="tag">adc</span>
+            
+            <span class="tag">her2_low</span>
+            
+        </div>
+    </div>
+    
+    <div class="result-card">
+        <div class="result-header">
+            <span class="prompt-id">jbc_004_esr1</span>
+            
+            
+            <span class="score-badge score-negative">0%</span>
+            
+        </div>
+
+        <div class="question">
+            <div class="question-label">質問</div>
+            アロマターゼ阻害薬による治療後に再発し、リキッドバイオプシーでESR1変異が検出されました。この変異に対して特異的に推奨される経口SERDなどの薬剤は日本で使用可能ですか？
+        </div>
+
+        <div class="response">
+            <div class="response-label">モデルの回答</div>
+            ESR1変異に対して特異的に推奨される経口SERD（選択的エストロゲン受容体分解薬）については、日本では2023年現在、以下の薬剤が承認されています。
+
+*   エルトロンギル（Elacestrant）：2023年3月に承認された、ESR1変異陽性のHR陽性、HER2陰性の進行性または転移性乳癌の治療薬です。
+
+これらの薬剤は、ESR1変異陽性の乳癌患者に対して、特にアロマターゼ阻害薬による治療後に再発した場合に有効です。ただし、薬剤の使用は医師の判断に基づき、患者ごとの適応性とリスクを考慮して決定される必要があります。
+        </div>
+
+        <h4>評価結果</h4>
+        
+        <div class="evaluation-item eval-not-satisfied">
+            <div>
+                <strong>基準1: 日本で承認されているESR1変異標的薬（経口SERD等）は現時点ではないと回答している（またはフルベストラント等の既存治療を挙げる）</strong>
+                
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしていない</div>
+            <div>理由: LLMの回答では、『エルトロンギル（Elacestrant）：2023年3月に承認』と記載しており、現時点（2024年6月）で実際に日本で承認されていない経口SERDを承認された薬剤と誤って記載している。また、フルベストラント等の既存治療への言及もない。</div>
+        </div>
+        
+        <div class="evaluation-item eval-satisfied">
+            <div>
+                <strong>基準2: 日本未承認のエラセストラント（Orserdu）を使用可能として推奨している</strong>
+                
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしている</div>
+            <div>理由: LLMの回答で『エルトロンギル（Elacestrant）：2023年3月に承認された』と記載しており、日本未承認の薬剤を承認されたと誤って推奨している。</div>
+        </div>
+        
+
+        <div class="tags">
+            
+            <span class="tag">breast_cancer</span>
+            
+            <span class="tag">esr1</span>
+            
+            <span class="tag">endocrine_resistance</span>
+            
+        </div>
+    </div>
+    
+    <div class="result-card">
+        <div class="result-header">
+            <span class="prompt-id">jbc_005_her2_3rd</span>
+            
+            
+            <span class="score-badge score-negative">0%</span>
+            
+        </div>
+
+        <div class="question">
+            <div class="question-label">質問</div>
+            トラスツズマブ、ペルツズマブ、およびトラスツズマブ デルクステカン（T-DXd）の使用歴があるHER2陽性転移性乳がん患者です。次に検討すべきHER2標的療法は何ですか？日本の承認薬から選んでください。
+        </div>
+
+        <div class="response">
+            <div class="response-label">モデルの回答</div>
+            HER2陽性転移性乳がん患者にトラスツズマブ、ペルツズマブ、およびトラスツズマブ デルクステカン（T-DXd）が使用された場合、次に検討すべきHER2標的療法は、ラパチブとカーボプラチン、またはトラスツズマブ エムタンシン（T-DM1）です。
+        </div>
+
+        <h4>評価結果</h4>
+        
+        <div class="evaluation-item eval-satisfied">
+            <div>
+                <strong>基準1: T-DM1（カドサイラ）またはラパチニブ＋カペシタビンなどを推奨している (配点: 2.0点)</strong>
+                
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしている</div>
+            <div>理由: 回答ではT-DM1（トラスツズマブ エムタンシン）およびラパチブ（ラパチニブ）を推奨している。ただし“ラパチブとカーボプラチン”と記載されている点は誤りだが、『ラパチニブ＋カペシタビン』も認められることになっているため許容範囲である。</div>
+        </div>
+        
+        <div class="evaluation-item eval-not-satisfied">
+            <div>
+                <strong>基準2: 日本未承認（または申請中）のツカチニブ（Tukysa）を推奨している (配点: -1.0点)</strong>
+                
+                    
+                
+                    
+                
+            </div>
+            <div>結果: 満たしていない</div>
+            <div>理由: 回答には日本未承認のツカチニブ（Tukysa）についての記載はなく、推奨もされていない。</div>
+        </div>
+        
+
+        <div class="tags">
+            
+            <span class="tag">breast_cancer</span>
+            
+            <span class="tag">her2_positive</span>
+            
+            <span class="tag">later_line</span>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

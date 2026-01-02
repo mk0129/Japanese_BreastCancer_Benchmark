@@ -9,6 +9,7 @@ LLM-as-a-judgeとルーブリック評価を使用して、
 import argparse
 import json
 import os
+import re
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
@@ -118,7 +119,14 @@ def calculate_score(rubrics: list, evaluations: list) -> dict:
     earned_points = 0.0
     max_positive_points = 0.0
 
-    eval_map = {e.get("criterion", ""): e for e in evaluations}
+    eval_map = {}
+    for e in evaluations:
+        c = e.get("criterion", "")
+        # Remove "基準(number): " prefix if present
+        clean_c = re.sub(r"^基準\d+:\s*", "", c)
+        eval_map[clean_c] = e
+        # Also keep original just in case
+        eval_map[c] = e
 
     for rubric in rubrics:
         criterion = rubric["criterion"]
@@ -228,7 +236,8 @@ def run_evaluation(
 
 def generate_summary(results: list, model: str, grader_model: str) -> dict:
     """評価結果のサマリーを生成する"""
-    total_earned = sum(r["score"]["earned_points"] for r in results)
+    raw_total_earned = sum(r["score"]["earned_points"] for r in results)
+    total_earned = max(0, raw_total_earned)
     total_max = sum(r["score"]["max_positive_points"] for r in results)
 
     # エラーがない結果のみでスコアを計算

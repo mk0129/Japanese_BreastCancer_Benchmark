@@ -14,7 +14,7 @@ fi
 MODELS=(
     "openai/gpt-4o"
     "anthropic/claude-3.5-sonnet"
-    "google/gemini-flash-1.5"
+    "google/gemini-2.5-flash"
     "meta-llama/llama-3-70b-instruct"
 )
 
@@ -29,7 +29,7 @@ for model in "${MODELS[@]}"; do
     echo "Evaluating model: $model"
     echo "----------------------------------------------------------------"
     
-    python jbc_eval.py \
+    python3 jbc_eval.py \
         --model "$model" \
         --base-url "$BASE_URL" \
         --api-key "$OPENROUTER_API_KEY" \

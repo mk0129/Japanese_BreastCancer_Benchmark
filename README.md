@@ -74,7 +74,7 @@ chmod +x run_multiple_evals.sh
   ],
   "rubrics": [
     {"criterion": "アベマシクリブまたはパルボシクリブを含めている", "points": 2.0, "tags": ["approved_drug"]},
-    {"criterion": "日本未承認のリボシクリブを推奨している", "points": -3.0, "tags": ["unapproved_trap"]}
+    {"criterion": "日本未承認のリボシクリブを推奨している", "points": -1.0, "tags": ["unapproved_trap"]}
   ],
   "example_tags": ["breast_cancer", "1st_line", "cdk4/6"]
 }

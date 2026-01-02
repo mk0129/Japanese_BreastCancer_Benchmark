@@ -30,6 +30,6 @@ ENV/
 env/
 
 # Project Specific
-results/
+# results/
 .DS_Store
 .env

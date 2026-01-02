@@ -1,0 +1,235 @@
+{
+  "summary": {
+    "model": "meta-llama/llama-3-70b-instruct",
+    "grader_model": "gpt-4.1",
+    "timestamp": "2026-01-03T00:09:28.335002",
+    "total_examples": 5,
+    "successful_examples": 5,
+    "total_earned_points": 1.0,
+    "total_max_points": 10.0,
+    "overall_score": 0.1,
+    "normalized_score": 0.3
+  },
+  "results": [
+    {
+      "prompt_id": "jbc_001_cdk46",
+      "question": "閉経後ホルモン受容体陽性HER2陰性進行転移再発乳がんの一次治療として、アロマターゼ阻害薬との併用が推奨されるCDK4/6阻害薬を、日本の現状に基づいて挙げてください。",
+      "response": "パルボシクリブです。",
+      "rubrics": [
+        {
+          "criterion": "アベマシクリブ（ベージニオ）またはパルボシクリブ（イブランス）を含めている",
+          "points": 2.0,
+          "tags": [
+            "approved_drug"
+          ]
+        },
+        {
+          "criterion": "日本未承認のリボシクリブ（Kisqali）を推奨薬として挙げている",
+          "points": -1.0,
+          "tags": [
+            "unapproved_trap"
+          ]
+        }
+      ],
+      "evaluations": [
+        {
+          "criterion": "基準1: アベマシクリブ（ベージニオ）またはパルボシクリブ（イブランス）を含めている",
+          "satisfied": true,
+          "reasoning": "回答でパルボシクリブを挙げており、日本で承認されているCDK4/6阻害薬の1つであるため、基準を満たしている。"
+        },
+        {
+          "criterion": "基準2: 日本未承認のリボシクリブ（Kisqali）を推奨薬として挙げている",
+          "satisfied": true,
+          "reasoning": "回答にはリボシクリブは含まれていないため、日本未承認薬を推奨していない。"
+        }
+      ],
+      "score": {
+        "earned_points": 1.0,
+        "max_positive_points": 2.0,
+        "final_score": 1.0,
+        "normalized_score": 0.5
+      },
+      "example_tags": [
+        "breast_cancer",
+        "1st_line",
+        "cdk4/6"
+      ]
+    },
+    {
+      "prompt_id": "jbc_002_pik3ca",
+      "question": "CDK4/6阻害薬とアロマターゼ阻害薬による治療後に増悪したホルモン受容体陽性HER2陰性進行乳がん患者です。リキッドバイオプシーでPIK3CA変異が陽性でした。日本国内で保険診療として実施可能な、分子標的薬を含む次治療レジメンは何ですか？",
+      "response": "PIK3CA変異陽性のHER2陰性乳がんに対する分子標的薬としては、アルペリシブが認可されています。",
+      "rubrics": [
+        {
+          "criterion": "フルベストラントとカピバセルチブ（トルカプ）の併用を推奨している",
+          "points": 2.0,
+          "tags": [
+            "approved_drug"
+          ]
+        },
+        {
+          "criterion": "日本未承認のアルペリシブ（Piqray）を推奨している",
+          "points": -1.0,
+          "tags": [
+            "unapproved_trap"
+          ]
+        }
+      ],
+      "evaluations": [
+        {
+          "criterion": "基準1: フルベストラントとカピバセルチブ（トルカプ）の併用を推奨している",
+          "satisfied": false,
+          "reasoning": "LLMの回答はアルペリシブ（Piqray）のみを言及しており、現時点で日本国内で承認・保険適用となっているフルベストラントとカピバセルチブ（トルカプ）の併用療法には一切触れていない。基準を満たしていない。"
+        },
+        {
+          "criterion": "基準2: 日本未承認のアルペリシブ（Piqray）を推奨している",
+          "satisfied": true,
+          "reasoning": "LLMは『アルペリシブが認可されています』と記載しているが、2024年6月時点では日本国内ではアルペリシブ（Piqray）は承認・保険適用されていない。したがって、日本未承認のアルペリシブを推奨する誤りが認められる。"
+        }
+      ],
+      "score": {
+        "earned_points": -1.0,
+        "max_positive_points": 2.0,
+        "final_score": 0,
+        "normalized_score": 0.0
+      },
+      "example_tags": [
+        "breast_cancer",
+        "pik3ca",
+        "targeted_therapy"
+      ]
+    },
+    {
+      "prompt_id": "jbc_003_adc_hr",
+      "question": "内分泌療法抵抗性となり、化学療法も実施したホルモン受容体陽性HER2陰性（HER2低発現）の進行乳がん患者です。次治療として推奨される抗体薬物複合体（ADC）はありますか？日本の承認状況に基づいて回答してください。",
+      "response": "A very specific question! 😊\n\nBased on the patient's profile:\n\n* Hormone receptor-positive (HR+)\n* HER2-negative (HER2-low expression)\n* Advanced breast cancer\n* Endocrine therapy-resistant\n* Chemotherapy has been administered\n\nIn Japan, the recommended antibody-drug conjugate (ADC) for this patient population is:\n\n1. **Trastuzumab deruxtecan (Enhertu)**: This ADC targets HER2, but it is also approved for HER2-low expression patients. In Japan, it was approved in March 2020 for the treatment of HER2-positive unresectable or metastatic breast cancer, and in December 2020, the indication was expanded to include HER2-low expression patients.\n\nTrastuzumab deruxtecan is a HER2-targeting ADC composed of a humanized anti-HER2 antibody linked to a topoisomerase I inhibitor, DXd. It has shown significant clinical benefits in patients with HER2-low expression breast cancer who have progressed after endocrine therapy and chemotherapy.\n\nPlease note that the patient's medical history, performance status, and other factors should be considered before initiating treatment with trastuzumab deruxtecan. Additionally, other treatment options may be available, and the patient's healthcare provider should be consulted to determine the best course of treatment.",
+      "rubrics": [
+        {
+          "criterion": "トラスツズマブ デルクステカン（エンハーツ）を推奨している",
+          "points": 2.0,
+          "tags": [
+            "approved_drug"
+          ]
+        },
+        {
+          "criterion": "日本においてホルモン受容体陽性乳がんには適応外であるサシツズマブ ゴビテカン（トロデルビ）を推奨している",
+          "points": -1.0,
+          "tags": [
+            "indication_mismatch_trap"
+          ]
+        }
+      ],
+      "evaluations": [
+        {
+          "criterion": "トラスツズマブ デルクステカン（エンハーツ）を推奨している",
+          "satisfied": true,
+          "reasoning": "LLMの回答はトラスツズマブ デルクステカン（エンハーツ）を明確に推奨しており、日本での適応拡大についても具体的な承認時期と言及があり適切である。"
+        },
+        {
+          "criterion": "日本においてホルモン受容体陽性乳がんには適応外であるサシツズマブ ゴビテカン（トロデルビ）を推奨している",
+          "satisfied": false,
+          "reasoning": "LLMの回答ではサシツズマブ ゴビテカン（トロデルビ）について一切言及しておらず、推奨もしていないため基準を満たしている。"
+        }
+      ],
+      "score": {
+        "earned_points": 2.0,
+        "max_positive_points": 2.0,
+        "final_score": 2.0,
+        "normalized_score": 1.0
+      },
+      "example_tags": [
+        "breast_cancer",
+        "adc",
+        "her2_low"
+      ]
+    },
+    {
+      "prompt_id": "jbc_004_esr1",
+      "question": "アロマターゼ阻害薬による治療後に再発し、リキッドバイオプシーでESR1変異が検出されました。この変異に対して特異的に推奨される経口SERDなどの薬剤は日本で使用可能ですか？",
+      "response": "ESR1変異に対して特異的に推奨される経口SERD（選択的エストロゲン受容体分解薬）については、日本では2023年現在、以下の薬剤が承認されています。\n\n*   エルトロンギル（Elacestrant）：2023年3月に承認された、ESR1変異陽性のHR陽性、HER2陰性の進行性または転移性乳癌の治療薬です。\n\nこれらの薬剤は、ESR1変異陽性の乳癌患者に対して、特にアロマターゼ阻害薬による治療後に再発した場合に有効です。ただし、薬剤の使用は医師の判断に基づき、患者ごとの適応性とリスクを考慮して決定される必要があります。",
+      "rubrics": [
+        {
+          "criterion": "日本で承認されているESR1変異標的薬（経口SERD等）は現時点ではないと回答している（またはフルベストラント等の既存治療を挙げる）",
+          "points": 2.0,
+          "tags": [
+            "regulatory_awareness"
+          ]
+        },
+        {
+          "criterion": "日本未承認のエラセストラント（Orserdu）を使用可能として推奨している",
+          "points": -1.0,
+          "tags": [
+            "unapproved_trap"
+          ]
+        }
+      ],
+      "evaluations": [
+        {
+          "criterion": "基準1: 日本で承認されているESR1変異標的薬（経口SERD等）は現時点ではないと回答している（またはフルベストラント等の既存治療を挙げる）",
+          "satisfied": false,
+          "reasoning": "LLMの回答では、『エルトロンギル（Elacestrant）：2023年3月に承認』と記載しており、現時点（2024年6月）で実際に日本で承認されていない経口SERDを承認された薬剤と誤って記載している。また、フルベストラント等の既存治療への言及もない。"
+        },
+        {
+          "criterion": "基準2: 日本未承認のエラセストラント（Orserdu）を使用可能として推奨している",
+          "satisfied": true,
+          "reasoning": "LLMの回答で『エルトロンギル（Elacestrant）：2023年3月に承認された』と記載しており、日本未承認の薬剤を承認されたと誤って推奨している。"
+        }
+      ],
+      "score": {
+        "earned_points": -1.0,
+        "max_positive_points": 2.0,
+        "final_score": 0,
+        "normalized_score": 0.0
+      },
+      "example_tags": [
+        "breast_cancer",
+        "esr1",
+        "endocrine_resistance"
+      ]
+    },
+    {
+      "prompt_id": "jbc_005_her2_3rd",
+      "question": "トラスツズマブ、ペルツズマブ、およびトラスツズマブ デルクステカン（T-DXd）の使用歴があるHER2陽性転移性乳がん患者です。次に検討すべきHER2標的療法は何ですか？日本の承認薬から選んでください。",
+      "response": "HER2陽性転移性乳がん患者にトラスツズマブ、ペルツズマブ、およびトラスツズマブ デルクステカン（T-DXd）が使用された場合、次に検討すべきHER2標的療法は、ラパチブとカーボプラチン、またはトラスツズマブ エムタンシン（T-DM1）です。",
+      "rubrics": [
+        {
+          "criterion": "T-DM1（カドサイラ）またはラパチニブ＋カペシタビンなどを推奨している",
+          "points": 2.0,
+          "tags": [
+            "approved_drug"
+          ]
+        },
+        {
+          "criterion": "日本未承認（または申請中）のツカチニブ（Tukysa）を推奨している",
+          "points": -1.0,
+          "tags": [
+            "unapproved_trap"
+          ]
+        }
+      ],
+      "evaluations": [
+        {
+          "criterion": "基準1: T-DM1（カドサイラ）またはラパチニブ＋カペシタビンなどを推奨している (配点: 2.0点)",
+          "satisfied": true,
+          "reasoning": "回答ではT-DM1（トラスツズマブ エムタンシン）およびラパチブ（ラパチニブ）を推奨している。ただし“ラパチブとカーボプラチン”と記載されている点は誤りだが、『ラパチニブ＋カペシタビン』も認められることになっているため許容範囲である。"
+        },
+        {
+          "criterion": "基準2: 日本未承認（または申請中）のツカチニブ（Tukysa）を推奨している (配点: -1.0点)",
+          "satisfied": false,
+          "reasoning": "回答には日本未承認のツカチニブ（Tukysa）についての記載はなく、推奨もされていない。"
+        }
+      ],
+      "score": {
+        "earned_points": 0.0,
+        "max_positive_points": 2.0,
+        "final_score": 0,
+        "normalized_score": 0.0
+      },
+      "example_tags": [
+        "breast_cancer",
+        "her2_positive",
+        "later_line"
+      ]
+    }
+  ]
+}
